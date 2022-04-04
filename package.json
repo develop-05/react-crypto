@@ -1,5 +1,5 @@
 {
-  "name": "koma-cryptocurrency",
+  "name": "crypto-observe",
   "version": "0.2.1",
   "private": true,
   "dependencies": {
@@ -20,6 +20,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "4.0.3",
+    "surge": "^0.23.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
