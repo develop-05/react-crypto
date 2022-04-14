@@ -9,6 +9,9 @@ const Signup = ({ handleClose }) => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  const [isType, setIsType] = useState(true);
+
+
   const { setAlert } = CryptoState();
 
   const handleSubmit = async () => {
@@ -64,7 +67,7 @@ const Signup = ({ handleClose }) => {
       <TextField
         variant="outlined"
         label="Пароль"
-        type="password"
+        type={isType ? "password" : "text"}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         fullWidth
@@ -72,11 +75,16 @@ const Signup = ({ handleClose }) => {
       <TextField
         variant="outlined"
         label="Подтвердите пароль"
-        type="password"
+        type={isType ? "password" : "text"}
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
         fullWidth
       />
+
+      <button style={{backgroundColor: "transparent", border: "none", outline: "none", color: "white", cursor: "pointer"}}
+        onClick={() => setIsType(!isType)}>
+        {isType ? "Показать пароль" : "Скрыть пароль"}
+      </button>
       <Button
         variant="contained"
         size="large"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import { Avatar, Button } from "@material-ui/core";
@@ -67,7 +67,7 @@ const useStyles = makeStyles({
 
 export default function UserSidebar() {
   const classes = useStyles();
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     right: false,
   });
   const { user, setAlert, watchlist, coins, symbol } = CryptoState();

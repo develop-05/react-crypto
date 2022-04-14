@@ -8,6 +8,9 @@ const Login = ({ handleClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [isType, setIsType] = useState(true);
+  // add show and hide password in AuthModal
+
   const { setAlert } = CryptoState();
 
   const handleSubmit = async () => {
@@ -59,11 +62,17 @@ const Login = ({ handleClose }) => {
       <TextField
         variant="outlined"
         label="Пароль"
-        type="password"
+        type={isType ? "password" : "text"}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         fullWidth
       />
+      <button style={{backgroundColor: "transparent", border: "none", outline: "none", color: "white", cursor: "pointer"}}
+        onClick={() => setIsType(!isType)}>
+        {isType ? "Показать пароль" : "Скрыть пароль"}
+      </button>
+
+
       <Button
         variant="contained"
         size="large"
