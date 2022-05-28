@@ -10,6 +10,7 @@ const Signup = ({ handleClose }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const [isType, setIsType] = useState(true);
+  // add show and hide password in AuthModal
 
 
   const { setAlert } = CryptoState();
@@ -18,7 +19,7 @@ const Signup = ({ handleClose }) => {
     if (password !== confirmPassword) {
       setAlert({
         open: true,
-        message: "Пароль не совпадает",
+        message: "Password doesn't match",
         type: "error",
       });
       return;
@@ -32,7 +33,7 @@ const Signup = ({ handleClose }) => {
       );
       setAlert({
         open: true,
-        message: `Регистрация завершена. Добро пожаловать ${result.user.email}`,
+        message: `Registration completed. Welcome ! ${result.user.email}`,
         type: "success",
       });
 
@@ -66,7 +67,7 @@ const Signup = ({ handleClose }) => {
       />
       <TextField
         variant="outlined"
-        label="Пароль"
+        label="Password"
         type={isType ? "password" : "text"}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
@@ -74,7 +75,7 @@ const Signup = ({ handleClose }) => {
       />
       <TextField
         variant="outlined"
-        label="Подтвердите пароль"
+        label="Confirm password"
         type={isType ? "password" : "text"}
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
@@ -83,7 +84,7 @@ const Signup = ({ handleClose }) => {
 
       <button style={{backgroundColor: "transparent", border: "none", outline: "none", color: "white", cursor: "pointer"}}
         onClick={() => setIsType(!isType)}>
-        {isType ? "Показать пароль" : "Скрыть пароль"}
+        {isType ? "Show password" : "Hide password"}
       </button>
       <Button
         variant="contained"
@@ -91,7 +92,7 @@ const Signup = ({ handleClose }) => {
         style={{ backgroundColor: "#EEBC1D" }}
         onClick={handleSubmit}
       >
-        Зарегистрироваться
+        sign up
       </Button>
     </Box>
   );

@@ -17,7 +17,7 @@ const Login = ({ handleClose }) => {
     if (!email || !password) {
       setAlert({
         open: true,
-        message: "Заполните поля",
+        message: "fill field",
         type: "warning",
       });
       return;
@@ -61,7 +61,7 @@ const Login = ({ handleClose }) => {
       />
       <TextField
         variant="outlined"
-        label="Пароль"
+        label="Password"
         type={isType ? "password" : "text"}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
@@ -69,7 +69,7 @@ const Login = ({ handleClose }) => {
       />
       <button style={{backgroundColor: "transparent", border: "none", outline: "none", color: "white", cursor: "pointer"}}
         onClick={() => setIsType(!isType)}>
-        {isType ? "Показать пароль" : "Скрыть пароль"}
+        {isType ? "Show password" : "Hide password"}
       </button>
 
 
@@ -78,8 +78,8 @@ const Login = ({ handleClose }) => {
         size="large"
         onClick={handleSubmit}
         style={{ backgroundColor: "#EEBC1D" }}
-      >
-        Войти
+      > 
+        log in
       </Button>
     </Box>
   );

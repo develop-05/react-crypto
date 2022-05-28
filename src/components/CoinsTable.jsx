@@ -72,10 +72,10 @@ export default function CoinsTable() {
           variant="h4"
           style={{ margin: 18, fontFamily: "Montserrat" }}
         >
-          Текущие цены на рынке криптовалют
+          Current prices in the cryptocurrency market
         </Typography>
         <TextField
-          label="Найти нужную валюту"
+          label="Find the right currency"
           variant="outlined"
           style={{ marginBottom: 20, width: "100%" }}
           onChange={(e) => setSearch(e.target.value)}
@@ -87,7 +87,7 @@ export default function CoinsTable() {
             <Table aria-label="simple table">
               <TableHead style={{ backgroundColor: "#EEBC1D" }}>
                 <TableRow>
-                  {["Валюта", "Цена", "Изменение за 24 часа", "Объем продаж"].map((head) => (
+                  {["Currency", "Price", "Change in 24 hours", "Volume of sales"].map((head) => (
                     <TableCell
                       style={{
                         color: "black",
@@ -95,7 +95,7 @@ export default function CoinsTable() {
                         fontFamily: "Montserrat",
                       }}
                       key={head}
-                      align={head === "Валюта" ? "left" : "right"}
+                      align={head === "Currency" ? "left" : "right"}
                     >
                       {head}
                     </TableCell>
@@ -163,7 +163,7 @@ export default function CoinsTable() {
                           {numberWithCommas(
                             row.market_cap.toString().slice(0, -6)
                           )}
-                          M
+              
                         </TableCell>
                       </TableRow>
                     );

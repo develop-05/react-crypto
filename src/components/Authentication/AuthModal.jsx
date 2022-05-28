@@ -62,7 +62,7 @@ export default function AuthModal() {
       .then((res) => {
         setAlert({
           open: true,
-          message: `Успех! ${res.user.email}`,
+          message: `Success! ${res.user.email}`,
           type: "success",
         });
 
@@ -90,7 +90,7 @@ export default function AuthModal() {
         }}
         onClick={handleOpen}
       >
-        Войти
+        log in
       </Button>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -119,8 +119,8 @@ export default function AuthModal() {
                 variant="fullWidth"
                 style={{ borderRadius: 10 }}
               >
-                <Tab label="Войти" />
-                <Tab label="Регистрация" />
+                <Tab label="log in" />
+                <Tab label="sign up" />
               </Tabs>
             </AppBar>
             {value === 0 && <Login handleClose={handleClose} />}
@@ -130,7 +130,7 @@ export default function AuthModal() {
               <GoogleButton
                 style={{ width: "70%", outline: "none"}}
                 onClick={signInWithGoogle}
-                label='Войти с Google'
+                label='log in with Google'
               /> 
             </Box>
           </div>

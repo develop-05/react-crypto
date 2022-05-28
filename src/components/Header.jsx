@@ -63,7 +63,6 @@ function Header() {
               onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={"USD"}>USD - $</MenuItem>
-              <MenuItem value={"RUB"}>RUB - ₽</MenuItem>
               <MenuItem value={"UAH"}>UAH - ₴</MenuItem>
             </Select>
 

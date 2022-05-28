@@ -90,7 +90,7 @@ export default function UserSidebar() {
     setAlert({
       open: true,
       type: "success",
-      message: "Выход успешен !",
+      message: "Exit successful!",
     });
 
     toggleDrawer();
@@ -107,7 +107,7 @@ export default function UserSidebar() {
 
       setAlert({
         open: true,
-        message: `${coin.name} Удалено из отслеживаемого !`,
+        message: `${coin.name} Removed from Followed !`,
         type: "success",
       });
     } catch (error) {
@@ -160,7 +160,7 @@ export default function UserSidebar() {
                 </span>
                 <div className={classes.watchlist}>
                   <span style={{ fontSize: 15, textShadow: "0 0 5px black" }}>
-                    Отслеживаемое
+                  Tracked
                   </span>
                   {coins.map((coin) => {
                     if (watchlist.includes(coin.id))
@@ -187,7 +187,7 @@ export default function UserSidebar() {
                 className={classes.logout}
                 onClick={logOut}
               >
-                Выйти
+                log out
               </Button>
             </div>
           </Drawer>

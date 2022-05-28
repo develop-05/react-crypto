@@ -40,7 +40,7 @@ const CoinPage = () => {
 
       setAlert({
         open: true,
-        message: `${coin.name} Добавлено в отслеживаемые !`,
+        message: `${coin.name} Added to Followed !`,
         type: "success",
       });
     } catch (error) {
@@ -63,7 +63,7 @@ const CoinPage = () => {
 
       setAlert({
         open: true,
-        message: `${coin.name} Удалено из отслеживаемого !`,
+        message: `${coin.name} Removed from Followed !`,
         type: "success",
       });
     } catch (error) {
@@ -150,7 +150,7 @@ const CoinPage = () => {
         <div className={classes.marketData}>
           <span style={{ display: "flex" }}>
             <Typography variant="h5" className={classes.heading}>
-              Рейтинг:
+            Rating:
             </Typography>
             &nbsp; &nbsp;
             <Typography
@@ -164,7 +164,7 @@ const CoinPage = () => {
           </span>
           <span style={{ display: "flex" }}>
             <Typography variant="h5" className={classes.heading}>
-              Текущая цена:
+            Current price:
             </Typography>
             &nbsp; &nbsp;
             <Typography
@@ -181,7 +181,7 @@ const CoinPage = () => {
           </span>
           <span style={{ display: "flex" }}>
             <Typography variant="h5" className={classes.heading}>
-              Торговый оборот:
+            Trade turnover:
             </Typography>
             &nbsp; &nbsp;
             <Typography
@@ -209,7 +209,7 @@ const CoinPage = () => {
               }}
               onClick={inWatchlist ? removeFromWatchlist : addToWatchlist}
             >
-              {inWatchlist ? "Удалить из отслеживаемого" : "Добавить в отслеживаемое"}
+              {inWatchlist ? "Remove from Watched" : "Add to Watched"}
             </Button>
           )}
         </div>
